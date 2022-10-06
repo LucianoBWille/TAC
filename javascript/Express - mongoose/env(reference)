@@ -1,0 +1,4 @@
+MONGODB_URL=<mongodb connection URL with you database, user and password>
+
+JWT_SECRET_KEY=<your jwt secret key (create what you want)
+JWT_TIMEOUT=86400
