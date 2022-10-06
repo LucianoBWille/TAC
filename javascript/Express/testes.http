@@ -1,0 +1,36 @@
+@URL = http://localhost:3000
+
+### raiz
+GET {{URL}}/
+
+### busca pessoas
+GET {{URL}}/pessoa
+
+{
+    "nome": "Alfredo",
+    "CPF": "1234"
+}
+### cadastra pessoas
+POST {{URL}}/pessoa
+Content-Type: application/json
+
+{
+    "nome": "Alfredo",
+    "CPF": "1234"
+}
+### atualiza pessoa
+PUT {{URL}}/pessoa/1663873010923
+Content-Type: application/json
+
+{
+    "nome": "Alfredo Atualizado",
+    "CPF": "123456789"
+}
+### atualiza pessoa
+DELETE  {{URL}}/pessoa/1663873010923
+Content-Type: application/json
+
+{
+    "nome": "Alfredo Atualizado",
+    "CPF": "123456789"
+}

@@ -1,0 +1,19 @@
+@URL=http://localhost:3000
+
+### Get token
+POST {{URL}}/auth
+Content-Type: application/json
+
+{
+    "login": "juca1",
+    "password": "123456"
+}
+
+### Get token (inválido)
+POST {{URL}}/auth
+Content-Type: application/json
+
+{
+    "login": "juca",
+    "password": "123456"
+}

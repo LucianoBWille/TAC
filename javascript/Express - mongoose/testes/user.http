@@ -1,0 +1,53 @@
+@URL=http://localhost:3000
+@TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6Imp1Y2ExIiwiaWF0IjoxNjY0NTYxNTM2LCJleHAiOjE2NjQ2NDc5MzZ9.TlR1MpBI0RRu5H1beaKIunECt9zoJmacnB0NuY8q5Tc
+
+### find Users
+GET {{URL}}/users
+Authorization: xxxxxxxxxxxxx
+
+### find Users
+GET {{URL}}/users
+Authorization: {{TOKEN}}
+
+### find User by ID
+GET {{URL}}/users/632df877beabd2f4527fedb0
+Authorization: {{TOKEN}}
+
+### Cadastrar User
+POST {{URL}}/users
+Content-Type: application/json
+
+{
+    "name": "Juca Silva",
+    "email": "juca@gmail.com",
+    "login": "juca1",
+    "password": "123"
+}
+
+### Atualizar User
+PUT {{URL}}/users/632df877beabd2f4527fedb0
+Authorization: {{TOKEN}}
+Content-Type: application/json
+
+{
+    "name": "Juca Silva Atualizado",
+    "email": "juca@gmail.com",
+    "login": "juca1",
+    "password": "123456"
+}
+
+### Atualizar User (forbiden)
+PUT {{URL}}/users/632df73f446da91767540d1c
+Authorization: {{TOKEN}}
+Content-Type: application/json
+
+{
+    "name": "Juca Silva Tentou Atualizar",
+    "email": "juca@gmail.com",
+    "login": "juca1",
+    "password": "123456"
+}
+
+### Deletar User
+DELETE {{URL}}/users/632df73f446da91767540d1c
+Authorization: {{TOKEN}}

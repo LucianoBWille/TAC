@@ -1,0 +1,53 @@
+@url=http://localhost:8080
+
+
+### Salvar Pessoa
+POST {{url}}/pessoa
+Content-Type: application/json
+
+{
+    "nome": "Juca da Silva",
+    "email": "juca@gmail.com",
+    "senha": "1234",
+    "nascimento": "1985-01-04"
+}
+
+### Salvar Pessoa
+POST {{url}}/pessoa
+Content-Type: application/json
+
+{
+    "nome": "Fulano de Tal",
+    "email": "fulano@gmail.com",
+    "senha": "1234",
+    "nascimento": "1985-02-25"
+}
+
+### Obter todas as pessoas
+GET {{url}}/pessoa
+
+### Obter todas as pessoas com parametro
+GET {{url}}/pessoa?nome=Juca
+
+### Obter pessoa por id
+GET {{url}}/pessoa/8385c7a3-3472-444b-9f64-d3cb20ab6815
+
+### Obter pessoa por id (não existe)
+GET {{url}}/pessoa/e548ceeb-7796-4d1e-bf3e-d25b8b79b43e
+
+### Obter pessoa por id (id inválido)
+GET {{url}}/pessoa/e548ceeb-7796-4d1e-bf3e-925b8b79b43x
+
+### Excluir pessoa por id
+DELETE {{url}}/pessoa/0c6c42df-a827-4a8c-a9f8-2a58d78cb613
+
+### Atualizar pessoa por id
+PUT {{url}}/pessoa/8385c7a3-3472-444b-9f64-d3cb20ab6815
+Content-Type: application/json
+
+{
+    "nome": "Juca da Atualização",
+    "email": "jucaAtualizado@gmail.com",
+    "senha": "1548",
+    "nascimento": "1985-11-22"
+}
