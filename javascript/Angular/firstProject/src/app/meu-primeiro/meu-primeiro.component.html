@@ -1,0 +1,19 @@
+<hr>
+<h2> Bora filho do Bill!!! </h2>
+<hr>
+<button (click)="clickDoBotao(nome, sobrenome)"> {{ nome }}, {{ sobrenome }}</button>
+
+<br>
+<input type="text" [value]="nome">
+<br>
+<input type="text" [(ngModel)]="nome">
+<hr>
+<div *ngIf="(nome.toLowerCase()==='bill')">Bora mulher do Bill</div>
+<hr>
+<ul>
+    <li *ngFor="let i of [0,1,2,3,4,5,6,7,8,9]">5 x {{i}} = {{ 5*i }}</li>
+</ul>
+<hr>
+<ul>
+    <li *ngFor="let fruta of frutas">{{fruta}}</li>
+</ul>
