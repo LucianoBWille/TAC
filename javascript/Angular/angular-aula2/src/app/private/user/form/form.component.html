@@ -1,1 +1,20 @@
-<p>form works!</p>
+<h1>Pessoa</h1>
+<div class="container">
+  <form [formGroup]="form">
+    <div class="form-group mt-3">
+      <label for="" class="form-label">Nome</label>
+      <input type="text" placeholder="Nome" class="form-control" formControlName="nome" />
+    </div>
+    <div class="form-group mt-3">
+      <label for="" class="form-label">Sobrenome</label>
+      <input type="text" placeholder="Sobrenome" class="form-control" formControlName="sobrenome" />
+    </div>
+    <div class="form-group mt-3">
+      <label for="" class="form-label">Email</label>
+      <input type="text" placeholder="Email" class="form-control" formControlName="email" />
+    </div>
+    <div class="form-group mt-3 text-center">
+        <button class="btn btn-success" (click)="salvar()" >Salvar</button>
+    </div>
+  </form>
+</div>
